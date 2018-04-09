@@ -1,0 +1,1062 @@
+@charset "utf-8";
+/* CSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@font-face {
+    font-family: 'BebasRegular';
+    src: url('font/BEBAS___-webfont.eot');
+    src: url('font/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/BEBAS___-webfont.woff') format('woff'),
+         url('font/BEBAS___-webfont.ttf') format('truetype'),
+         url('font/BEBAS___-webfont.svg#BebasRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ChampagneLimousinesRegular';
+    src: url('font/champagne__limousines-webfont.eot');
+    src: url('font/champagne__limousines-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/champagne__limousines-webfont.woff') format('woff'),
+         url('font/champagne__limousines-webfont.ttf') format('truetype'),
+         url('font/champagne__limousines-webfont.svg#ChampagneLimousinesRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChampagneLimousinesBold';
+    src: url('font/champagne__limousines_bold-webfont.eot');
+    src: url('font/champagne__limousines_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/champagne__limousines_bold-webfont.woff') format('woff'),
+         url('font/champagne__limousines_bold-webfont.ttf') format('truetype'),
+         url('font/champagne__limousines_bold-webfont.svg#ChampagneLimousinesBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SFToontimeBlotchRegular';
+    src: url('font/SF_Toontime_Blotch-webfont.eot');
+    src: url('font/SF_Toontime_Blotch-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/SF_Toontime_Blotch-webfont.woff') format('woff'),
+         url('font/SF_Toontime_Blotch-webfont.ttf') format('truetype'),
+         url('font/SF_Toontime_Blotch-webfont.svg#SFToontimeBlotchRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*****************
+ General 
+ ****************/
+html,body{
+ 	font-family: 'BebasRegular', Helvetica, sans-serif;
+	width:100%;
+	height:100%;
+}
+.slide{
+	width:100%;
+	height:100%;
+	position: relative;
+	box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
+	z-index: 1;
+}
+.button{
+	display:block;
+	width:50px;
+	height:50px;
+	position:absolute;
+	bottom:0px;
+	left:48.5%;
+	background-color:#333333;
+	background-image:url(../images/arrow.png);
+	background-repeat: no-repeat;
+}
+.button.top{
+	background-image:url(../images/arrow_top.png);
+	background-repeat: no-repeat;
+}
+.button:hover{
+	background-color:#494949;
+	cursor:pointer;
+}
+span{
+	position:absolute;
+	bottom:0px;
+}
+span.slidename{
+	font-weight:bold;
+	left:0px;
+	font-size:5em;
+	margin-left: 6%;
+	color: #73BA57;/* The Fallback */
+	color:rgba(115,186,87,0.3);	
+	z-index: 0;
+}
+span.copyright{
+	right:0px;
+	text-align: right;
+	display: inline-block;
+	text-decoration: none;
+	width: 100%;	
+	font-size:.8em;
+	color: #73BA57;/* The Fallback */
+	color:rgba(115,186,87,0.8);
+	font-family: 'ChampagneLimousinesRegular', Helvetica, sans-serif;
+	padding-bottom: .5%;
+	z-index: 0;
+}
+span.copyright a{
+	text-decoration: none;
+	color: #73BA57;/* The Fallback */
+	color:rgba(115,186,87,0.8);
+	display: inline;
+}	
+span.copyright a:hover{
+	text-decoration: underline;
+}
+.content{
+	width: 80%;
+	margin: auto;
+	padding: 20px 83px;
+	height: auto;
+}
+/*****************
+ Typographie 
+ ****************/
+ h1, h2, h3{
+	text-align: center;
+	color: #ff80a2;
+}
+h1{
+	font-size: 6em;
+	padding-bottom: 1%;
+	font-family: 'ChampagneLimousinesBold', Helvetica, sans-serif;
+	clear: both;
+}
+h2{
+	font-size: 2em;
+	padding-top: 3%;
+	display: inline-block;
+	text-align: center;
+	margin: auto;
+	width: 95%;
+	margin-right: 3%;
+	font-family: 'BebasRegular', Helvetica, sans-serif;
+}
+h3 {
+    font-family: 'SFToontimeBlotchRegular';
+    font-size: 1.5em;
+    margin: -2%;
+	display: inline-block;
+	text-align: center;
+	margin: auto;
+	width: 95%;
+}
+p{
+	font-family:'ChampagneLimousinesRegular', Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 1em;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: none;
+	text-indent: 2em;
+	text-align: justify;
+	padding-bottom: 2%;
+	line-height: 1.2em;
+	letter-spacing: 0.06em;
+	clear: both;
+	color: #000;
+}
+p.agence{
+	text-indent: 0;
+}
+p.note{
+	clear: both;
+	font-family:'ChampagneLimousinesRegular', Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 0.8em;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: none;
+	text-align: right;
+	text-indent: 0;
+	padding-top: 0.2em;
+	line-height: 0.6em;
+	letter-spacing: 0.06em;
+}
+p a{
+	display: inline;
+}
+a{
+	text-align: center;
+	font-family: 'ChampagneLimousinesRegular', Helvetica, sans-serif;
+	display: inline-block;
+	color: #ff80a2;
+	text-decoration: none;
+	width: 100%;
+}
+a:hover{
+	text-decoration: underline;
+}
+a.titre2{
+	display: inline-block;
+	text-align: center;
+	margin: auto;
+	width: 95%;
+	margin-right: 3%;
+	font-family: 'BebasRegular', Helvetica, sans-serif;
+}
+a.titre2:hover{
+	text-decoration: underline;
+}
+img{
+	max-width:50%;
+	margin: auto;
+	display: block; 
+}
+ul{
+	padding: 1em 0 0 2em;
+}
+ol{
+	list-style: decimal;
+}
+ol li{
+	font-size: 0.9em;
+	font-family:'ChampagneLimousinesRegular', Helvetica, sans-serif;
+	font-style: normal;
+	list-style: decimal;
+	list-style-position: outside;
+	padding-bottom: 1em;
+	text-align: left;
+	margin-left: 1.3em;
+}
+ul li{
+	font-size: 0.9em;
+	font-family:'ChampagneLimousinesRegular', Helvetica, sans-serif;
+	font-style: normal;
+	list-style: circle;
+	list-style-position: outside;
+	padding-bottom: 1em;
+	text-align: left;
+}
+ol li:nth-child(2){
+	padding-bottom: 0em;
+}
+ol li a,
+ul li a{
+	color: #000;
+	text-decoration: none;
+	font-family:'ChampagneLimousinesRegular', Helvetica, sans-serif;
+	font-style: normal;
+	text-align: left;
+	display: inline;
+}
+ol li a:hover,
+ul li a:hover{
+	text-decoration: underline;
+}
+/*****************
+ Navigation 
+ ****************/
+.navigation{
+	position:fixed;
+	z-index:11;
+}
+.navigation{
+	width: 5%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.navigation a{
+	color:transparent;
+	display:block;
+	line-height:68px;
+	font-weight:bold;
+	text-align:left;
+	width:100%;
+	height: 12.6%;
+	white-space: nowrap;
+   	font-size:25px; 
+   	line-height:100%;
+   	text-align:center;  
+   	position: relative; 
+   	padding: 0;
+   	margin: 0;
+}
+
+.tooltip:hover:after{
+	content:attr(data-tooltip);
+	display:block;
+	padding: .3em;
+	color: #FFF;
+	background-color: #333;
+	border: 0.1em solid #333;
+	-webkit-border-radius: .3em;
+	-moz-border-radius:.3em;
+	border-radius: .3em;
+	position: absolute;
+	top:30%;
+	left: 130%;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+.tooltip:hover:before{
+	display: block;
+	content: "";
+	position: absolute;
+	border-right: .5em solid #333;
+	border-bottom: .5em solid transparent;
+	border-top: .5em solid transparent;
+	top:40%;
+	left: 100%;
+}
+.navigation a img { 
+	vertical-align:middle; 
+	max-width: 65%;
+	padding-top: 50%;
+}
+.navigation a li_1 {
+	background-color: #FFF;
+	box-shadow:inset 1px 29px 10px -19px rgba(0,0,0,0.3);
+}
+.navigation a.li_2 {
+	background-color: #ffa5a7;
+}
+.navigation a.li_3 {
+	background-color: #70A9CC;
+}
+.navigation a.li_4 {
+	background-color: #FFEB79;
+}
+.navigation a.li_5 {
+	background-color: #A0E0A9;
+}
+.navigation a.li_6 {
+	background-color: #00ADA7;
+}
+.navigation a.li_7 {
+	background-color: #FF6740;
+}
+.navigation a.li_8 {
+	background-color: #C59FCD;
+}
+.navigation a:hover {
+	cursor:pointer;
+}
+/******************************
+ SLIDE 1 THE WEDDING
+*******************************/
+#slide1{
+	background: #FFF url(../images/slide1/bg_2.gif) repeat-y 44% 0%!important;
+	max-width: 100%;
+	max-height: 100%;
+}
+#slide1 h3{
+	padding-left: 3%;
+}
+div.std{ /*Save The Date */
+	margin: auto;
+	width: 38%;
+}
+div.std img{
+	margin: auto;
+	display: block;
+	max-width: 100%;
+}
+img.img_h{ /*Drapeau Kenyan */
+	display: inline;
+	margin-right: 20px;
+	margin-left: 20px;
+	width: auto;
+	vertical-align: middle;
+}
+.timer-area{
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+ul#countdown{
+	text-align: center;
+	padding: 0;
+}
+ul#countdown li {
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+  padding: 2% 2% 0 0;
+}
+ul#countdown li span {
+  font-size: 2em;
+  font-weight: bold;
+  color: #1f2225;
+  position: relative;
+}
+ul#countdown li span::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid white;
+  position: absolute;
+  top: 0.7em;
+}
+ul#countdown li p.timeRefDays,
+ul#countdown li p.timeRefHours,
+ul#countdown li p.timeRefMinutes,
+ul#countdown li p.timeRefSeconds {
+  color: #909091;
+  text-transform: uppercase;
+  font-size: .875em;
+  text-align: center;
+  text-indent: 0;
+  margin: 0;
+  padding: 0;
+}
+/******************************
+ SLIDE 2 LES VOLS
+*******************************/
+#slide2{
+	background-color:#fff;	
+}
+.col4{
+	width: 23%;
+	height: 19em;
+	float: left;
+	margin: auto;
+	display: block;
+	border: solid 0.15em #73BA57;
+	margin-right: 1%;
+	margin-top: 1%;
+	position: relative;
+	overflow: hidden;
+}
+.col4.marge{
+	margin-right: 0;
+}
+.col4 h2{
+	width: 100%;
+	border-bottom: solid 0.07em #73BA57;	
+}
+.col4 div.inside{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.col4 div.inside h3{
+	font-size: 1em;
+}
+.col4 div.inside p{
+	font-size: 0.9em;
+	text-align: justify;
+	text-indent: 0;
+	padding:1em 2em 1em 2em;
+	line-height: 1em;
+	letter-spacing: 0.06em;
+}
+
+/******************************
+ SLIDE 3 LES HEBERGEMENTS
+*******************************/
+#slide3{
+	background-color:#fff;
+}
+.col3{
+	width: 32%;
+	height: auto;
+	float: left;
+	margin: auto;
+	display: block;
+	border: solid 0.15em #73BA57;
+	margin-right: 1%;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 1em;
+}
+.col3.marge3{
+	margin-right: 0;
+}
+.col3 h2{
+	width: 100%;
+	border-bottom: solid 0.07em #73BA57;
+}
+.col3 p{
+	font-size: 0.9em;
+	padding:1em 2em 1em 2em;
+}
+
+/******************************
+ SLIDE 4 LA FAQ
+*******************************/
+
+#slide4{
+	background-color: #fff;
+}
+/******************************
+ SLIDE 5 CHECKLIST
+*******************************/
+
+#slide5{
+	background-color: #fff;
+}
+.col3 h3{
+	color: black;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-size: 1.5em;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.col3 input{
+	margin-left: -1.5em;
+	margin-right: 1.2em;
+}
+.label_check { 
+	padding-left: 10%;
+	padding-right: 4%;
+	font-size: 1.1em; 
+	font-family: 'ChampagneLimousinesBold', Helvetica, sans-serif;
+	font-style: normal;
+}
+#slide5 .col3{
+	border: none;
+	background: url(../images/clipboard_03.png) no-repeat ;
+	background-size: 100%;
+	height: 460px;
+}
+#slide5 div.content div.col3 ul li{
+	list-style: none;
+}
+/******************************
+ SLIDE 6 QUE FAIRE
+*******************************/
+
+#slide6{
+	background-color: #fff;
+}
+img.safari{
+	max-width: 73%;
+}
+.todo .col3{
+	background: none;
+	border: 1px solid black;
+	height: auto;
+}
+.todo .col3 .inside{
+	width: 100%;
+}
+.todo .col3 .inside a{
+	width: 100%;
+	display: block;
+	padding:0;
+	margin: 0;
+}
+/******************************
+ SLIDE 7 CONTACT
+*******************************/
+#slide7{
+	background-color: #fff;
+}
+.wrap{
+	width: 100%;
+	margin: auto;
+}
+.contact{
+	width: 50%;
+	float: left;
+	margin:auto;
+}
+img.photo{
+	padding: 2%;
+	background: white;
+	border: 1px solid #ff80a2;
+	margin: auto;
+	display: block;
+	max-width: 40%;
+}
+#contact_form{
+	clear: both;
+	width: 73%;
+	margin: auto;
+}
+.contact p{
+	text-align: center;
+	text-indent: 0;
+}
+.contact h2{
+	text-align: center;
+	text-indent: 0;
+	margin: 0;
+	width: 100%;
+}
+/******************************
+ SLIDE 8 WEDDING GIFT
+*******************************/
+#slide8{
+	background-color: #fff;
+}
+#slide8 h3{
+	font-family: 'ChampagneLimousinesBold', Helvetica, sans-serif;
+	font-size: 2em;
+	color: #000;
+	padding-bottom: 1%;
+	line-height: 1em;
+}
+#slide8 h4{
+	font-family: 'ChampagneLimousinesBold', Helvetica, sans-serif;
+	font-size: 1.5em;
+	color: #000;	
+}
+#slide8 a{
+	font-size: 1.4em;
+	padding-bottom: 1em;
+}
+#slide8 p{
+	font-family: 'ChampagneLimousinesBold', Helvetica, sans-serif;
+	font-size: 1em;
+	color: #000;	
+	text-align: center;
+	padding: 0;	
+}
+form {
+	margin-bottom: 20px; 
+}
+label {
+	display: block;
+	font-size: 0.8em;
+}
+input[type="text"],
+textarea{
+	border: 1px solid #ccc;
+	padding: 6px 4px;
+	outline: none;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #777;
+	margin: 0;
+	width: 50%;
+	max-width: 100%;
+	display: block;
+	margin-bottom: 20px;
+	background: #fff; 
+}
+input[type="text"]:focus,
+textarea:focus {
+	border: 1px solid #aaa;
+	color: #444;
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+	box-shadow:  0 0 3px rgba(0,0,0,.2); 
+}
+textarea {
+	min-height: 60px; 
+}
+textarea#message{
+	width: 70%;
+	float: left;
+}
+select {
+	width: 220px; 
+}
+input[type="checkbox"] {
+	display: inline; 
+}
+label span,
+legend span {
+	font-weight: normal;
+	font-size: 13px;
+	color: #444; 
+}
+/* #Buttons
+================================================== */
+input[type="submit"]{
+	background: #eee; /* Old browsers */
+	background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
+	background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
+	background: #eee -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
+	background: #eee -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
+	background: #eee -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
+	background: #eee linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
+  	border: 1px solid #aaa;
+  	border-top: 1px solid #ccc;
+  	border-left: 1px solid #ccc;
+  	-moz-border-radius: 3px;
+  	-webkit-border-radius: 3px;
+  	border-radius: 3px;
+  	color: #444;
+  	display: inline-block;
+  	font-size: 1.2em;
+  	text-align: center;
+  	font-weight: bold;
+  	text-decoration: none;
+  	text-shadow: 0 1px rgba(255, 255, 255, .75);
+  	cursor: pointer;
+  	margin-bottom: 20px;
+    line-height: normal;
+	padding: 8px 10px;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    margin: auto;
+	display: block;
+	width: 23%;
+	float: right;
+}
+input[type="submit"]:hover{
+	color: #222;
+	background: #ddd; /* Old browsers */
+	background: #ddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
+	background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
+	background: #ddd -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: #ddd -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
+	background: #ddd -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
+	background: #ddd linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
+  	border: 1px solid #888;
+  	border-top: 1px solid #aaa;
+  	border-left: 1px solid #aaa; 
+}
+
+input[type="submit"]:active{
+	border: 1px solid #666;
+	background: #ccc; /* Old browsers */
+	background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
+	background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); /* Chrome,Safari4+ */
+	background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Chrome10+,Safari5.1+ */
+	background: #ccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Opera11.10+ */
+	background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
+	background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ 
+}
+/* Fix for odd Mozilla border & padding issues */
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}	
+table{
+	width: 80%;
+	margin: 1em auto;
+	border: solid 1px #333;
+}
+tr{
+	border: solid 1px #333;
+}
+td{
+	text-align: right;
+	line-height: 1.2em;
+	padding-right: 1em;
+}
+tr td:nth-child(2){
+	text-align: left;
+	border-left: solid 1px #333;
+	padding-left: 1em;
+}
+.Accordion {
+	border-left: solid 0.1em #ff80a2;
+	border-right: solid 0.1em #ff80a2;
+	border-bottom: solid 0.1em #ff80a2;
+	overflow: hidden;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+}
+.AccordionPanel {
+	margin: 0px;
+	padding: 0px;
+}
+.AccordionPanelTab {
+	background-color: #73BA57;
+	border-top: solid 0.05em #ff80a2;
+	border-bottom: solid 0.05em #ff80a2;
+	margin: 0px;
+	padding: 2px;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	font-size: 1.2em;
+	padding: 0.2em 0.2em 0.2em 1em;
+	color: #fff;
+}
+.AccordionPanelContent {
+	overflow: auto;
+	margin: 0px;
+	padding: 0px;
+	height: 250px;
+}
+.AccordionPanelContent p{
+	padding-right: 1em;
+	padding-left: 1em;
+}
+.AccordionPanelContent ul{
+	padding: 1em 1em 0 2em;
+}
+.AccordionPanelContent ol li{
+	font-size: 1em;
+	font-family:'ChampagneLimousinesBold', Helvetica, sans-serif;
+	font-style: normal;
+	list-style: decimal;
+	list-style-position: outside;
+	padding-bottom: 1em;
+	text-align: justify;
+}
+.AccordionPanelContent ul li{
+	font-size: 1em;
+	font-family:'ChampagneLimousinesBold', Helvetica, sans-serif;
+	font-style: normal;
+	list-style: circle;
+	list-style-position: outside;
+	padding-bottom: 1em;
+	text-align: justify;
+}
+.AccordionPanelContent ol li:nth-child(2){
+	padding-bottom: 0em;
+}
+.AccordionPanelContent ol li a,
+.AccordionPanelContent ul li a{
+	color: #B26262;
+	text-decoration: none;
+	font-family:'ChampagneLimousinesBold', Helvetica, sans-serif;
+	font-style: normal;
+}
+.AccordionPanelContent ol li a:hover,
+.AccordionPanelContent ul li a:hover{
+	text-decoration: underline;
+}
+.AccordionPanelOpen .AccordionPanelTab {
+	background-color: #73BA57;
+}
+.AccordionPanelTabHover {
+	color: #555555;
+}
+.AccordionPanelOpen .AccordionPanelTabHover {
+	color: #555555;
+}
+.AccordionFocused .AccordionPanelTab {
+	background-color: #73BA57;
+}
+.AccordionFocused .AccordionPanelOpen .AccordionPanelTab {
+	background-color: #73BA57;
+}
+/* Rules for Printing */
+@media print {
+.Accordion {
+  overflow: visible !important;
+}
+.AccordionPanelContent {
+  display: block !important;
+  overflow: visible !important;
+  height: auto !important;
+  }
+}/*/mediaquery*/
+/* #Media Queries
+================================================== */
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 1366px) {
+		#slide2{
+			height: 794px;
+		}
+		#slide3{
+			height: 764px;
+		}
+		#slide4{
+			height: 666px;
+		}
+		#slide5{
+			height: 650px;
+		}
+		#slide6{
+			height: 739px;
+		}
+		#slide7{
+			height: 728px;
+		}
+		
+	}/*/mediaquery*/
+	@media only screen and (max-width: 1280px) {
+		#slide2{
+			height: 794px;
+		}
+		#slide3{
+			height: 764px;
+		}
+		#slide4{
+			height: 666px;
+		}
+		#slide5{
+			height: 650px;
+		}
+		#slide6{
+			height: 739px;
+		}
+		#slide7{
+			height: 728px;
+		}
+		
+	}/*/mediaquery*/
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (max-width: 1024px) {
+	
+		#slide2{
+			height: 824px;
+		}
+		#slide3{
+			height: 844px;
+		}
+		#slide4{
+			height: 666px;
+		}
+		#slide5{
+			height: 690px;
+		}
+		#slide6{
+			height: 739px;
+		}
+		#slide7{
+			height: 658px;
+		}
+	}/*/mediaquery*/
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 768px) {
+		#slide1{
+			background: white url(../images/slide1/bg_2.gif) repeat-y 54% 0%!important
+		}
+		h1{
+			font-size: 3em;
+		}
+		h2{
+			font-size: 1em;
+		}
+		h3{
+			font-size: 1em;
+		}
+		.col4 div.inside h3{
+			font-size: 0.9em;
+		}
+		.col4 div.inside p {
+			font-size: 0.9em;
+			text-align: justify;
+			text-indent: 0;
+			padding: 0.5em 0.7em 0.5em 0.7em;
+			line-height: 0.9em;
+			letter-spacing: 0.06em;
+		}
+		.col4{
+			height: 11em;
+		}
+		ul li {
+			font-size: 0.9em;
+			font-family: 'ChampagneLimousinesRegular', Helvetica, sans-serif;
+			font-style: normal;
+			list-style: circle;
+			list-style-position: outside;
+			padding-bottom: 0.1em;
+			text-align: left;
+		}
+		p{
+			font-size: 0.9em;
+		}
+		#slide2{
+			height: auto;
+		}
+		#slide3{
+			height: 910px;
+		}
+		#slide4{
+			height: 666px;
+		}
+		#slide5{
+			height: 690px;
+		}
+		#slide6{
+			height: 617px;
+		}
+		#slide7{
+			height: 658px;
+		}
+		.button{
+			height: 34px;
+		}
+		span.slidename {
+			font-weight: bold;
+			left: 0px;
+			font-size: 2em
+		}
+	}/*/mediaquery*/
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 520px) {
+	
+		.col4{
+			height: 14em;
+		}
+		#slide3{
+			height: 1154px;
+		}
+		#slide3 .col3{
+			width: 100%;
+		}
+		#slide5{
+			height: 770px;
+		}
+		#slide5 .col3{
+			width: 100%;
+		}
+		#slide6 .col3{
+			width: 31%;
+		}
+		span.slidename {
+			font-weight: bold;
+			left: 0px;
+			font-size: 2em
+		}
+			
+	}/*/mediaquery*/
+

@@ -1,0 +1,15 @@
+.slide{
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='#aaaaaa', Direction=0, Strength=10);
+    zoom: 1;
+    height: auto;
+  } 
+
+#slide1{
+	height: auto;
+}
+.content{
+	height: auto;
+}
+h3{
+	padding-bottom: 3%;
+}

@@ -1,0 +1,22 @@
+ul#countdown li {
+  float: left;
+  display: none;
+  zoom:1;
+  list-style-type: none;
+}
+ul#countdown{
+	display: block;
+}
+#slide5 .content h2{
+	width: 100%;
+}
+#slide1 .content{
+	height: 900px;
+}
+#slide2 h2{
+	font-size: 1.3em;
+	border: none;
+}
+#slide2 .inside h3{
+	font-size: 1.15em;
+}
